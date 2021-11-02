@@ -11,10 +11,12 @@ public class UI {
 
         //limpaConsole();
 
-        System.out.println("Bem vindo ao Tinder da Politécnica!");
-        System.out.println("");
-        System.out.println("Bem vindo ao Tinder da Politécnica!");
-        System.out.println("Bem vindo ao Tinder da Politécnica!");
+    }
+
+    public void bemVindo() {
+        System.out.println("Bem vindo ao Tinder da Politécnica! \n");
+        System.out.println("Você já tem uma conta? ");
+        System.out.println("1- Sim \n2- Não");
     }
 
     public void limpaConsole() {
@@ -22,4 +24,13 @@ public class UI {
             System.out.println("");
         }
     }
+
+    public void pedirNome() {
+        System.out.print("Insira seu nome: ");
+    }
+
+    public void pedirSenha() {
+        System.out.print("Insira sua senha: ");
+    }
+
 }

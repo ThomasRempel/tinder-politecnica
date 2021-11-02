@@ -22,14 +22,6 @@ public class Usuario {
         this.sobreMim = sobreMim;
     }
 
-    public String cadastrar(Usuario usuario) {
-        return "";
-    }
-
-    public String logar(String nome, String senha) {
-        return "";
-    }
-
     public Usuario verMeuPerfil(Usuario usuario) {
         return usuario;
     }
