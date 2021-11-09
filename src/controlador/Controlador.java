@@ -66,6 +66,8 @@ public class Controlador {
         }
         else if (sexo == 'm'){
             //implementar aqui um novo método para cadastrar caso a usuária seja mulher
+
+            
         }
 
 
@@ -89,8 +91,8 @@ public class Controlador {
         System.out.println("Logou com sucesso!");
 */
 
-        ControladorTxt controladorTxt = new ControladorTxt();
-        ControladorTxt.ControladorTxt(cadastro, "C:\\Windows\\Temp\\perfisFem");
+        //ControladorTxt controladorTxt = new ControladorTxt();
+        //ControladorTxt.ControladorTxt(cadastro, "C:\\Windows\\Temp\\perfisFem");
 
 
 
