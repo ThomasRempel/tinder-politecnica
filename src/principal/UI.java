@@ -1,7 +1,5 @@
 package principal;
 
-
-
 public class UI {
     public UI() {
     }
@@ -35,5 +33,11 @@ public class UI {
     public void pedirSenha() {
         System.out.print("Insira sua senha: ");
     }
+
+    public void homemOuMulher() {
+        System.out.println("Qual o seu sexo?");
+        System.out.print("Digite \"M\" para homem ou \"F\" para mulher: ");
+    }
+
 
 }
