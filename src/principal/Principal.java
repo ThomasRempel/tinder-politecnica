@@ -1,6 +1,7 @@
 package principal;
 
 import controlador.Controlador;
+import controlador.ControladorTxt;
 
 import java.util.Scanner;
 
@@ -9,5 +10,7 @@ public class Principal {
         //Inicia as configurações da aplicação
         Controlador controlador = new Controlador();
         controlador.iniciaConfiguracoes();
+
+
     }
 }

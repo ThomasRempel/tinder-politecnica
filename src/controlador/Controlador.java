@@ -85,11 +85,16 @@ public class Controlador {
         System.out.print("Digite seu período:");
         int periodo = sc.nextInt();
 
-
-        //Usuario usuario = new Usuario(nome, senha, idade, curso, periodo, gostos, sobreMim);
+        String cadastro = "@" + nome +"@" + ""+ "%" + senha + "%" + "" + "&" + idade + "&"+ "" + "$" + curso + "$" + "" + "!" + periodo + "!" + "" + "*" + "Gosto1" +"," + "gosto2" + "*" + "#" + "preferencia" + "#" + "" +  "'" + "Sobre Mim" + "'";
+                //Usuario usuario = new Usuario(nome, senha, idade, curso, periodo, gostos, sobreMim);
         System.out.println("Logou com sucesso!");
+*/
 
-         */
+        ControladorTxt controladorTxt = new ControladorTxt();
+        ControladorTxt.ControladorTxt(cadastro, "C:\\Windows\\Temp\\perfisFem");
+
+
+
     }
 
     public List<Usuario> buscarPretendenteAleatoria() {
