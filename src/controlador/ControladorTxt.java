@@ -21,9 +21,9 @@ public class ControladorTxt{
 
     public static void leLinha(String cadastro) throws Exception {
         BufferedReader br = new BufferedReader(
-                new InputStreamReader(new FileInputStream("C:\\Windows\\Temp\\perfisTinder\\perfisFem.txt"), "UTF-8"));
+                new InputStreamReader(new FileInputStream("C:\\Windows\\Temp\\perfisFem.txt"), "UTF-8"));
         BufferedReader br2 = new BufferedReader(
-                new InputStreamReader(new FileInputStream("C:\\Windows\\Temp\\perfisTinder\\perfisMasc.txt"), "UTF-8"));
+                new InputStreamReader(new FileInputStream("C:\\Windows\\Temp\\perfisMasc.txt"), "UTF-8"));
 
         String linha;
         boolean logou = false;
