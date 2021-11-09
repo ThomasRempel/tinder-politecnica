@@ -57,6 +57,19 @@ public class Controlador {
     }
 
     public void cadastrar() {
+        System.out.println("Qual o seu sexo?");
+        System.out.print("Digite \"\\\"h\\\"\" para homem ou \"\\\"m\\\"\" para mulher:");
+        char sexo = sc.nextLine().charAt(0);
+
+        if (sexo == 'h') {
+            //implementar aqui um novo método para cadastrar caso o usuário seja homem
+        }
+        else if (sexo == 'm'){
+            //implementar aqui um novo método para cadastrar caso a usuária seja mulher
+        }
+
+
+        /*          pode utilizar este cadastro como parte da implementação ;)
         System.out.print("Digite seu nome:");
         //printando sc.nextLine() para não bugar
         sc.nextLine();
@@ -74,6 +87,8 @@ public class Controlador {
 
         //Usuario usuario = new Usuario(nome, senha, idade, curso, periodo, gostos, sobreMim);
         System.out.println("Logou com sucesso!");
+
+         */
     }
 
     public List<Usuario> buscarPretendenteAleatoria() {
