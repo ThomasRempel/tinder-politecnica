@@ -5,6 +5,7 @@ import principal.UI;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Controlador {
@@ -57,6 +58,21 @@ public class Controlador {
     }
 
     public void cadastrar() {
+        ui.homemOuMulher();
+        sc.nextLine();
+        String sexo = sc.nextLine();
+
+        if (sexo.toLowerCase().equals("m")) {
+            //implementar aqui um novo método para cadastrar caso o usuário seja homem
+        }
+        else if (sexo.toLowerCase().equals("f")){
+            //implementar aqui um novo método para cadastrar caso a usuária seja mulher
+
+            
+        }
+
+
+        /*          pode utilizar este cadastro como parte da implementação ;)
         System.out.print("Digite seu nome:");
         //printando sc.nextLine() para não bugar
         sc.nextLine();
@@ -71,9 +87,18 @@ public class Controlador {
         System.out.print("Digite seu período:");
         int periodo = sc.nextInt();
 
-
-        //Usuario usuario = new Usuario(nome, senha, idade, curso, periodo, gostos, sobreMim);
+        String cadastro = "@" + nome +"@" + ""+ "%" + senha + "%" + "" + "&" + idade + "&"+ "" + "$" + curso + "$" + "" + "!" + periodo + "!" + "" + "*" + "Gosto1" +"," + "gosto2" + "*" + "#" + "preferencia" + "#" + "" +  "'" + "Sobre Mim" + "'";
+                //Usuario usuario = new Usuario(nome, senha, idade, curso, periodo, gostos, sobreMim);
         System.out.println("Logou com sucesso!");
+*/
+
+
+      //  ControladorTxt controladorTxt = new ControladorTxt();
+       // ControladorTxt.ControladorTxt(cadastro, "C:\\Windows\\Temp\\perfisFem");
+
+
+
+
     }
 
     public List<Usuario> buscarPretendenteAleatoria() {
