@@ -1,5 +1,7 @@
 package principal;
 
+
+
 public class UI {
     public UI() {
     }
@@ -27,6 +29,7 @@ public class UI {
 
     public void pedirNome() {
         System.out.print("Insira seu nome: ");
+
     }
 
     public void pedirSenha() {
