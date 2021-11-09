@@ -5,6 +5,7 @@ import principal.UI;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Controlador {
@@ -57,14 +58,14 @@ public class Controlador {
     }
 
     public void cadastrar() {
-        System.out.println("Qual o seu sexo?");
-        System.out.print("Digite \"\\\"h\\\"\" para homem ou \"\\\"m\\\"\" para mulher:");
-        char sexo = sc.nextLine().charAt(0);
+        ui.homemOuMulher();
+        sc.nextLine();
+        String sexo = sc.nextLine();
 
-        if (sexo == 'h') {
+        if (sexo.toLowerCase().equals("h")) {
             //implementar aqui um novo método para cadastrar caso o usuário seja homem
         }
-        else if (sexo == 'm'){
+        else if (sexo.toLowerCase().equals("m")){
             //implementar aqui um novo método para cadastrar caso a usuária seja mulher
         }
 

@@ -33,4 +33,10 @@ public class UI {
         System.out.print("Insira sua senha: ");
     }
 
+    public void homemOuMulher() {
+        System.out.println("Qual o seu sexo?");
+        System.out.print("Digite \"\\\"h\\\"\" para homem ou \"\\\"m\\\"\" para mulher:");
+    }
+
+
 }
