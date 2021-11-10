@@ -62,10 +62,10 @@ public class Controlador {
         sc.nextLine();
         String sexo = sc.nextLine();
 
-        if (sexo.toLowerCase().equals("M")) {
+        if (sexo.toLowerCase().equals("m")) {
             //implementar aqui um novo método para cadastrar caso o usuário seja homem
         }
-        else if (sexo.toLowerCase().equals("F")){
+        else if (sexo.toLowerCase().equals("f")){
             //implementar aqui um novo método para cadastrar caso a usuária seja mulher
 
             
