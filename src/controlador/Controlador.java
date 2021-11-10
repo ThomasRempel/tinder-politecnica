@@ -1,6 +1,7 @@
 package controlador;
 
 import modelo.Usuario;
+import modelo.UsuarioHomem;
 import principal.UI;
 
 import java.util.ArrayList;
@@ -63,7 +64,7 @@ public class Controlador {
         String sexo = sc.nextLine();
 
         if (sexo.toLowerCase().equals("m")) {
-            //implementar aqui um novo método para cadastrar caso o usuário seja homem
+            cadastrarHomem();
         }
         else if (sexo.toLowerCase().equals("f")){
             //implementar aqui um novo método para cadastrar caso a usuária seja mulher
@@ -99,6 +100,25 @@ public class Controlador {
 
 
 
+    }
+
+    private void cadastrarHomem() {
+        System.out.print("Digite seu nome:");
+        sc.nextLine();
+        String nome = sc.nextLine();
+        System.out.print("Digite sua senha:");
+        String senha = sc.nextLine();
+        System.out.print("Digite sua idade:");
+        int idade = sc.nextInt();
+        System.out.print("Digite seu curso:");
+        sc.nextLine();
+        String curso = sc.nextLine();
+        System.out.print("Digite seu período:");
+        int periodo = sc.nextInt();
+
+        String cadastro = "@" + nome +"@" + ""+ "%" + senha + "%" + "" + "&" + idade + "&"+ "" + "$" + curso + "$" + "" + "!" + periodo + "!" + "" + "*" + "Gosto1" +"," + "gosto2" + "*" + "#" + "preferencia" + "#" + "" +  "'" + "Sobre Mim" + "'";
+        //UsuarioHomem usuarioHomem = new UsuarioHomem(nome, senha, idade, curso, periodo, gostos, sobreMim);
+        System.out.println("Logou com sucesso!");
     }
 
     public List<Usuario> buscarPretendenteAleatoria() {
