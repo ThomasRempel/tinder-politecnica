@@ -11,6 +11,5 @@ public class Principal {
         Controlador controlador = new Controlador();
         controlador.iniciaConfiguracoes();
 
-
     }
 }

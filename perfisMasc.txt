@@ -1,45 +1,45 @@
-@Mikael@ &19& $BCC$ !2! *2, 6* #Fem#  'O que gosto: trabalho, família, viajar e de uma boa companhia.'
-@Thomas@ &18& $BCC$ !2! *5, 6* #Fem# 'Não tenho expectativas neste Tinder da Politécnica… vamos ver o que acontece!'
-@Enzo@ &19& $BCC$ !2! *4, 6* #Fem# 'O bate-papo aqui é muito lento, passa o whats'
-@Pietro@ &19& $ENG CIVIL$ !3! *1, 4* #Fem# 'Bom, está com tempo? Então pega a cadeira que a história é longa.'
-@Angelo@ &21& $ENG MECÂNICA$ !4! *2, 5* #Fem# 'A procura de uma namorada, espero o seu sinal.'
-@Murilo@ &25& $ENG MECÂNICA$ !5! *4, 6* #Fem# 'Tranquilo e de bem com a vida'
-@Samuel@ &17& $JD$ !1! *5, 6* #Fem# 'Sou tudo aquilo que uma mulher procura.'
-@Antônio@ &20& $ENG PRODUÇÃO$ !3! *1, 3* #Fem# 'Sou simples, tranquilo, amante da natureza. Solteiro, sem filhos.'
-@Thiago@ &18& $ENG COMPUTAÇÃO$ !4! *4, 6* #Fem# 'Difícil falar de nós mesmos. Sou autêntico, cavalheiro, romântico, carinhoso, sempre muito sincero e simples.'
-@Emanuel@ &22& $ENG ELÉTRICA$ !3! *2, 3* #Fem# 'Adoro uma boa conversa, boa música e boa companhia.'
-@Guilherme@ &26& $ENG CIVIL$ !9! *3, 5* #Fem# 'Solteiro sem filhos, não fumo. A procura de uma amiga, se possível, quem queira relacionamento sério.'
-@Diego@ &19& $ENG BIOMÉDICA$ !1! *3, 6* #Fem# 'Pouco me importa a marca de suas roupas, bolsa, carro, etc. Mas sim, que tipo de pessoa você é em seu coração. Seja bem-vinda.'
-@Leonardo@ &22& $ENG SOFTWARE$ !5! *4, 5* #Fem# 'A vida está aí e passa muito depressa. Está a fim de viver? Vem comigo!'
-@Giovanni@ &23& $ENG QUÍMICA$ !6! *1, 6* #Fem# 'Sou simpático, romântico, adoro cinema, sair à noite para dançar. Sou sincero e extrovertido.'
-@Marco@ &24& $BCS$ !4! *3, 4* #Fem# 'Sou simples, tranquilo, amante da natureza.'
-@Patrick@ &17& $ENG ELÉTRICA$ !1! *1, 5* #Fem# 'Adoro cafuné, guerra de travesseiros e roubar o edredom durante a noite.'
-@Henry@ &18& $ENG COMPUTAÇÃO$ !2! *1, 2* #Fem# 'Sou do tipo que ama uma boa comida, então vou pedir um iFood para o nosso jantar virtual.'
-@Nicolas@ &23& $ENG MECATRÔNICA$ !7! *2, 4* #Fem# 'Não tenho COVID desde 1979'
-@Kevin@ &25& $BSI$ !5! *2, 4* #Fem# 'Se online já sou tudo de bom, espere até nos encontrarmos pessoalmente.'
-@Robert@ &26& $ENG BIOMÉDICA$ !9! *2, 6* #Fem# 'Queria alguém para maratonar séries comigo, topa?'
-@Breno@ &21& $ENG MECATRÔNICA$ !4! *1, 5* #Fem# 'Agora que já demos match, você está convidada para o nosso casamento!'
-@Marcelo@ &24& $ENG PRODUÇÃO$ !5! *3, 4* #Fem# 'Quem diria que uma deusa como você cometeria o deslize de conversar com um mortal como eu?'
-@Thiago@ &25& $JD$ !6! *2, 4* #Fem# 'Oi. Só passei pra avisar que a gente tá namorando. Acho que você ainda não sabia'
-@José@ &27& $ENG MECÂNICA$ !9! *1, 2* #Fem# ' Nunca acreditei em amor à primeira vista, mas, depois de te encontrar por aqui, acredito em amor ao primeiro match'
-@Alexandre@ &20& $ENG QUÍMICA$ !3! *3, 4* #Fem# 'Gata, você é a prova de que Deus existe mesmo, porque uma criatura perfeita assim só pode ser criação divina!'
-@Tomás@ &23& $BSI$ !5! *2, 5* #Fem# 'quer deletar o perfil deste aplicativo junto comigo? Acho que não precisamos mais dele...'
-@Ricardo@ 25& $ENG ELÉTRICA$ !7! *5, 6* #Fem# 'A vida pode até não estar fácil para você, mas eu estou.'
-@Fernando@ &19& $ENG SOFTWARE$ !2! *1, 4* #Fem# 'Estou procurando alguém com crédito para ligar e pedir uma pizza.'
-@Lucas@ &24& $BCS$ !6! *5, 6* #Fem# 'Nossa... Acho que vou te denunciar aqui. Esses olhos não podem ser reais!'
-@Gustavo@ &22& $ENG QUÍMICA$ !5! *2, 3* #Fem# 'Achei que esse aplicativo permitia apenas humanos, mas acho que estou enganado. Olha que anjo sem asas que acabo de encontrar!'
-@Samuel@ &25& $ENG MECATRÔNICA$ !8! *2, 5* #Fem# 'Viajar, aventuras, esportes radicais também são uma parte vital de mim, mas eu gosto de lisonjeá-los e assisti-los em vez de praticar.'
-@Igor@ &18& $ENG CIVIL$ !2! *3, 4* #Fem# 'Olá, se você está lendo este texto agora, saiba que eu quero tirá-la deste app. Me dê o seu melhor sorriso que eu o multiplicarei!'
-@Jhonatan@ &26& $ENG PRODUÇÃO$ !9! *4, 5* #Fem# 'Busco afinidade, sintonia e a sinergia entre duas pessoas. Se isso faz sentido para você, continue.'
-@Everton@ &21& $ENG COMPUTAÇÃO$ !6! *5, 6* #Fem# 'Adoro correr, conhecer novos lugares, um delicioso café descontraído com amigos.'
-@Rafael@ &20& $ENG CIVIL$ !4! *3, 6* #Fem# 'Quero conhecer mulheres interessadas em algo mais sério e tranquilo.'
-@André@ &23& $ENG BIOMÉDICA$ !7! *1, 3* #Fem# 'Um cara muito legal. Vamos dar risada porque a vida já é muito difícil!'
-@George@ &18& $ENG SOFTWARE$ !1! *3, 5* #Fem# 'Pessoa simples, que gosta de curtir a vida, adora uma boa festa, viajar.'
-@Luiz@ &18& $BSI$ !1! *4, 6* #Fem# 'Fiel à família e à vida. À procura de uma pessoa especial.'
-@Fabrício@ &24& $BSC$ !5! *1, 2* #Fem# 'Gosto de coisas simples como bons momentos com amigos, um cinema ou um bom show'
-@Anderson@ &25& $ENG BIOMÉDICA$ !9! *2, 4* #Fem# 'Não tenho medo de me apaixonar. Adoro viver intensamente. O resto, fale-me você!'
-@Paulo@ &22& $BCC$ !6! *1, 5* #Fem# 'Sou simples, tranquilo, amante da natureza. Solteiro, sem filhos.'
-@Patrick@ &20& $JD$ !4! *3, 5* #Fem# 'Me tira do Tinder!!!'
-@Robson@ &25& $ENG MECÂNICA$ !8! *2, 5* #Fem# 'Te conto no caminho...'
-@Mateus@ &19& $ENG PRODUÇÃO$ !2! *5, 6* #Fem# 'Em busca de uma crush pra me acompanhar no casamento via Zoom do meu primo '
-@Felipe@ &21& $ENG QUÍMICA$ !5! *2, 4* #Fem# 'Louco para arrumar uma companhia para fazer vídeos engraçados no TikTok comigo'
+Mikael;19;BCC;2;2, 6;Fem;O que gosto: trabalho, família, viajar e de uma boa companhia.
+Thomas;18;BCC;2;5, 6;Fem;Não tenho expectativas neste Tinder da Politécnica… vamos ver o que acontece!
+Enzo;19;BCC;2;4, 6;Fem;O bate-papo aqui é muito lento, passa o whats
+Pietro;19;ENG CIVIL;3;1, 4;Fem;Bom, está com tempo? Então pega a cadeira que a história é longa.
+Angelo;21;ENG MECÂNICA;4;2, 5;Fem;A procura de uma namorada, espero o seu sinal.
+Murilo;25;ENG MECÂNICA;5;4, 6;Fem;Tranquilo e de bem com a vida
+Samuel;17;JD;1;5, 6;Fem;Sou tudo aquilo que uma mulher procura.
+Antônio;20;ENG PRODUÇÃO;3;1, 3;Fem;Sou simples, tranquilo, amante da natureza. Solteiro, sem filhos.
+Thiago;18;ENG COMPUTAÇÃO;4;4, 6;Fem;Difícil falar de nós mesmos. Sou autêntico, cavalheiro, romântico, carinhoso, sempre muito sincero e simples.
+Emanuel;22;ENG ELÉTRICA;3;2, 3;Fem;Adoro uma boa conversa, boa música e boa companhia.
+Guilherme;26;ENG CIVIL;9;3, 5;Fem;Solteiro sem filhos, não fumo. A procura de uma amiga, se possível, quem queira relacionamento sério.
+Diego;19;ENG BIOMÉDICA;1;3, 6;Fem;Pouco me importa a marca de suas roupas, bolsa, carro, etc. Mas sim, que tipo de pessoa você é em seu coração. Seja bem-vinda.
+Leonardo;22;ENG SOFTWARE;5;4, 5;Fem;A vida está aí e passa muito depressa. Está a fim de viver? Vem comigo!
+Giovanni;23;ENG QUÍMICA;6;1, 6;Fem;Sou simpático, romântico, adoro cinema, sair à noite para dançar. Sou sincero e extrovertido.
+Marco;24;BCS;4;3, 4;Fem;Sou simples, tranquilo, amante da natureza.
+Patrick;17;ENG ELÉTRICA;1;1, 5;Fem;Adoro cafuné, guerra de travesseiros e roubar o edredom durante a noite.
+Henry;18;ENG COMPUTAÇÃO;2;1, 2;Fem;Sou do tipo que ama uma boa comida, então vou pedir um iFood para o nosso jantar virtual.
+Nicolas;23;ENG MECATRÔNICA;7;2, 4;Fem;Não tenho COVID desde 1979
+Kevin;25;BSI;5;2, 4;Fem;Se online já sou tudo de bom, espere até nos encontrarmos pessoalmente.
+Robert;26;ENG BIOMÉDICA;9;2, 6;Fem;Queria alguém para maratonar séries comigo, topa!
+Breno;21;ENG MECATRÔNICA;4;1, 5;Fem;Agora que já demos match, você está convidada para o nosso casamento!
+Marcelo;24;ENG PRODUÇÃO;5;3, 4;Fem;Quem diria que uma deusa como você cometeria o deslize de conversar com um mortal como eu?
+Thiago;25;JD;6;2, 4;Fem;Oi. Só passei pra avisar que a gente tá namorando. Acho que você ainda não sabia
+José;27;ENG MECÂNICA;9;1, 2;Fem;Nunca acreditei em amor à primeira vista, mas, depois de te encontrar por aqui, acredito em amor ao primeiro match
+Alexandre;20;ENG QUÍMICA;3;3, 4;Fem;Gata, você é a prova de que Deus existe mesmo, porque uma criatura perfeita assim só pode ser criação divina!
+Tomás;23;BSI;5;2, 5;Fem;quer deletar o perfil deste aplicativo junto comigo? Acho que não precisamos mais dele...
+Ricardo;25;ENG ELÉTRICA;7;5, 6;Fem;A vida pode até não estar fácil para você, mas eu estou.
+Fernando;19;ENG SOFTWARE;2;1, 4;Fem;Estou procurando alguém com crédito para ligar e pedir uma pizza.
+Lucas;24;BCS;6;5, 6;Fem;Nossa... Acho que vou te denunciar aqui. Esses olhos não podem ser reais!
+Gustavo;22;ENG QUÍMICA;5;2, 3;Fem;Achei que esse aplicativo permitia apenas humanos, mas acho que estou enganado. Olha que anjo sem asas que acabo de encontrar!
+Samuel;25;ENG MECATRÔNICA;8;2, 5;Fem;Viajar, aventuras, esportes radicais também são uma parte vital de mim, mas eu gosto de lisonjeá-los e assisti-los em vez de praticar.
+Igor;18;ENG CIVIL;2;3, 4;Fem;Olá, se você está lendo este texto agora, saiba que eu quero tirá-la deste app. Me dê o seu melhor sorriso que eu o multiplicarei!
+Jhonatan;26;ENG PRODUÇÃO;9;4, 5;Fem;Busco afinidade, sintonia e a sinergia entre duas pessoas. Se isso faz sentido para você, continue.
+Everton;21;ENG COMPUTAÇÃO;6;5, 6;Fem;Adoro correr, conhecer novos lugares, um delicioso café descontraído com amigos.
+Rafael;20;ENG CIVIL;4;3, 6;Fem;Quero conhecer mulheres interessadas em algo mais sério e tranquilo.
+André;23;ENG BIOMÉDICA;7;1, 3;Fem;Um cara muito legal. Vamos dar risada porque a vida já é muito difícil!
+George;18;ENG SOFTWARE;1;3, 5;Fem;Pessoa simples, que gosta de curtir a vida, adora uma boa festa, viajar.
+Luiz;18;BSI;1;4, 6;Fem;Fiel à família e à vida. À procura de uma pessoa especial.
+Fabrício;24;BSC;5;1, 2;Fem;Gosto de coisas simples como bons momentos com amigos, um cinema ou um bom show.
+Anderson;25;ENG BIOMÉDICA;9;2, 4;Fem;Não tenho medo de me apaixonar. Adoro viver intensamente. O resto, fale-me você!
+Paulo;22;BCC;6;1, 5;Fem;Sou simples, tranquilo, amante da natureza. Solteiro, sem filhos.
+Patrick;20;JD;4;3, 5;Fem;Me tira do Tinder!!!
+Robson;25;ENG MECÂNICA;8;2, 5;Fem;Te conto no caminho...
+Mateus;19;ENG PRODUÇÃO;2;5, 6;Fem;Em busca de uma crush pra me acompanhar no casamento via Zoom do meu primo 
+Felipe;21;ENG QUÍMICA;5;2, 4;Fem;Louco para arrumar uma companhia para fazer vídeos engraçados no TikTok comigo

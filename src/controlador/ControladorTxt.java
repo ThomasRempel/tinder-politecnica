@@ -19,24 +19,26 @@ public class ControladorTxt{
         }
     }
 
-    public static void leLinha(String cadastro) throws Exception {
+    public static boolean leLinha(String nome, String senha) throws Exception {
+
+
         BufferedReader br = new BufferedReader(
                 new InputStreamReader(new FileInputStream("C:\\Windows\\Temp\\perfisFem.txt"), "UTF-8"));
         BufferedReader br2 = new BufferedReader(
                 new InputStreamReader(new FileInputStream("C:\\Windows\\Temp\\perfisMasc.txt"), "UTF-8"));
 
         String linha;
-        boolean logou = false;
 
         while ((linha = br.readLine()) != null) {
-            if(linha.contains(cadastro)){
-                logou = true;
+            String [] logins = linha.split(";");
+            if(nome == logins[0] && senha == logins[1]){
                 System.out.println("Logado com sucesso!");
+                return true;
             }
         }
-        if (logou == false){
-            System.out.println("Login ou senha incorreta");
-        }
+        System.out.println("Login ou senha incorretos.");
         br.close();
+        return false;
     }
 }
+
