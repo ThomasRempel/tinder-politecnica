@@ -4,6 +4,7 @@ import modelo.UsuariaMulher;
 import modelo.Usuario;
 import modelo.UsuarioHomem;
 import principal.UI;
+import utils.DadosTxt;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +25,7 @@ public class Controlador {
     //tudo o que iniciar por primeiro deve estar neste método
     public void iniciaConfiguracoes() {
         ui.iniciaAplicacao();
+        DadosTxt.criaArquivosTxt();
         adicionarGostos();
         ui.bemVindo();
         possuiConta();

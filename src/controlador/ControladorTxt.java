@@ -40,5 +40,9 @@ public class ControladorTxt{
         br.close();
         return false;
     }
+
+    private void inicializaArquivoComUsuariosPretendentes() {
+
+    }
 }
 
