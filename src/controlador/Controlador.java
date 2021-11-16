@@ -116,7 +116,7 @@ public class Controlador {
         String cadastro = nome +";" + senha + ";" + idade + ";" + curso + ";" + periodo + ";" + gosto1 + ";" + gosto2 + ";"  + sobreMim;
 
         ControladorTxt controladorTxt = new ControladorTxt();
-        ControladorTxt.ControladorTxt(cadastro, "C:\\Windows\\Temp\\perfisMasc");
+        ControladorTxt.ControladorTxt(cadastro, "C:\\Windows\\Temp\\perfisMasc.txt");
 
         UsuarioHomem usuarioHomem = new UsuarioHomem(nome, senha, idade, curso, periodo, listaNova, sobreMim);
 
@@ -150,7 +150,7 @@ public class Controlador {
 
         String cadastro = nome +";" + senha + ";" + idade + ";" + curso + ";" + periodo + ";" + gosto1 + ";" + gosto2 + ";"  + sobreMim;
         ControladorTxt controladorTxt = new ControladorTxt();
-        ControladorTxt.ControladorTxt(cadastro, "C:\\Windows\\Temp\\perfisFem");
+        ControladorTxt.ControladorTxt(cadastro, "C:\\Windows\\Temp\\perfisFem.txt");
 
         UsuariaMulher usuariaMulher = new UsuariaMulher(nome, senha, idade, curso, periodo, listaNova, sobreMim);
         System.out.println("Logou com sucesso!");

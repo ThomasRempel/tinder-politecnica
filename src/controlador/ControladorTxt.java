@@ -8,7 +8,7 @@ public class ControladorTxt{
         try {
             Writer bw;
             bw = new BufferedWriter(new FileWriter(nomeArquivo, true));
-            bw.write(conteudo + "\n");
+            bw.write("\n" + conteudo + "\n");
             bw.close();
         } catch (UnsupportedEncodingException e) {
             // TODO Auto-generated catch block
@@ -47,10 +47,6 @@ public class ControladorTxt{
         leArquivoFem.close();
         leArquivoMasc.close();
         return false;
-    }
-
-    private void inicializaArquivoComUsuariosPretendentes() {
-
     }
 }
 
