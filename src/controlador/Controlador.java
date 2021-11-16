@@ -51,8 +51,8 @@ public class Controlador {
 
     public void logar() {
         ui.pedirNome();
-        String nome = sc.nextLine();
         sc.nextLine();
+        String nome = sc.nextLine();
         ui.pedirSenha();
         String senha = sc.nextLine();
         try{
