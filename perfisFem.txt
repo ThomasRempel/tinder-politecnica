@@ -1,0 +1,45 @@
+Julia;19;ENG CIVIL;3;2, 4;MASC;Virginiana com ascendente em peixes e lua em sagitário, tigre no horóscopo.
+Maria;21;BSI;6;1,6;MASC;Curto uma breja, uma cachaça e uma boa companhia para conversar. Vamos conversar e marcar um barzinho?
+Eduarda;23;JD;8;4, 5;MASC;Difícil falar de nós mesmos. Sou autêntica, romântica, carinhosa, sempre muito sincera e simples. Adoro uma boa conversa, boa música e boa companhia.
+Laura;20;ENG ELETRICA;3;2,3;MASC;Sou cristã, adoro conhecer novas pessoas e amo viajar.
+Gabrielle;19;BCC;2;4, 6;MASC;Me chama la (41)9552-3420
+Paula Beatriz;19;BCC;2;2, 5;MASC;Adoro viajar e as praias me fascinam. Vivo a vida intensamente, e você?
+Fernanda;20;BSI;3;1, 2;MASC;Não tenho medo das novas ideias, mas das velhas sim.
+Marcela;21;JD;6;1, 3;MASC;Não tão louca quanto pareço
+Talita;22;ENG CIVIL;8;1, 4;MASC;Simpática, engraçada e simples
+Julia;19;ENG QUIMICA;4;1, 5;MASC;Eu gosto de cantar, caras com cabelos bagunçados, ler um livro nas manhãs de domingo.
+Beatriz;20;ENG BIOMEDICA;6;1, 6;MASC;Simples, doce e objetiva.
+Karol;24;BSI;7;3, 4;MASC;Cansada de procurar e não encontrar.
+Vitória;19;BCS;3;3, 5;MASC;Gosto muito de pessoas honestas, bem humoradas e gentis.
+Camila;21;JD;4;3, 6;MASC;Eu não sei me descrever e nem sei puxar assunto.Eu não sei me descrever e nem sei puxar assunto.
+Sara;22;BCS;5;4, 5;MASC;Quer alguém pra construir um relacionamento ? Então pode me esquecer
+Sarah;22;ENG SOFTWARE;8;4, 6;MASC;Tranquila e de bem com a vida.
+Thaysa;20;BSI;1;2, 6;MASC;Se você está procurando alguém só pra ficar, pode passar pra próxima
+Isabella;23;ENG CIVIL;6;5, 6;MASC;Não procuro relacionamentos, só vim dar umas risadas.
+Bianca;22;JD;2;1, 2;MASC;Pouco me importa a marca de suas roupas, bolsa, carro, etc. Mas sim, que tipo de pessoa você é em seu coração
+Manuela;21;ENG MECANICA;4;1, 3;MASC;Sei o que quero da minha vida, quero te encontrar e dizer que vale a pena ficar com você.
+Helena;20;ENG COMPUTAÇÃO;2;1, 4;MASC;Procurando novos amigos, para sair, beber, conversar e dançar.
+Isabelly;19;BCC;3;1, 5;MASC;Amo a vida, adoro viajar.
+Ana;20;BSI;3;5, 6;MASC;Filhos, corrida, escalada, estudar, conhecer pessoas.
+Rebeca;18;ENG ELÉTRICA;1;2, 3;MASC;Isso aqui é um cardápio humano, me tire daqui!
+Emanuelly;20;ENG PRODUÇÃO;3;2, 4;MASC;Sou tudo o que você está procurando.
+Sophia;23;ENG MECATRONICA;5;2, 5;MASC;As vezes vale a pena viver por aquilo que você morreria!
+Carolina;22;BSI;6;2, 6;MASC;A procura de um namorado, espero o seu sinal.
+Ester;21;JD;3;3, 5;MASC;A procura de um amigo, se possível, quem queira relacionamento sério.
+Rayssa;20;JD;2;3, 6;MASC;Por uma vida com mais sorrisos e gentilezas.
+Jennifer;20;BCS;1;3, 4;MASC;A vida está aí e passa muito depressa. Está a fim de viver? Vem comigo!
+Amanda;21;BCS;5;5, 6;MASC;Os pequenos detalhes são sempre os mais importantes
+Gabriela;22;BCS;7;4, 5;MASC;Casa comigo?
+Clara;21;BSI;6;4, 6;MASC;O futuro não está escrito. Nós fazemos nosso próprio destino.
+Rosanna;19;ENG BIOMEDICA;6;1, 3;MASC;Não tenho medo das novas ideias, mas das velhas sim.
+Heloisa;18;ENG COMPUTAÇÃO;2;1, 2;MASC;Cinema, exposições, bares, shows, rock, jazz, bossa nova, cerveja, vinho, caipirinha, séries, livros.
+Alícia;23;ENG CIVIL;6;1, 4;MASC;O ontem é história, o amanhã é um mistério, mas o hoje é uma dádiva. É por isso que se chama presente.
+Maria;22;ENG PRODUÇÃO;8;1, 6;MASC;O que quer que aconteça amanhã, teremos o hoje!
+Carolina;20;ENG ELÉTRICA;4;1, 5;MASC;A diferença do amor e o ódio é que por ódio você mata… por amor você morre!
+Milena;21;ENG SOFTWARE;4;2, 3;MASC;Capacidade de falar não é sinal de inteligência!
+Nathalia;21;ENG MECANICA;3;2, 4;MASC;As pessoas temem o que não entendem.
+Gabrielly;21;ENG MECATRONICA;2;2, 5;MASC;Porque se disfarçar, se você pode se destacar?
+Luana;20;ENG QUIMICA;5;2, 6;MASC;tentando pagar meu aluguel, tocar minha música e fazer o meu caminho.
+Bruna;19;BCC;1;3, 4;MASC;Você deveria saber que eu odeio idosos, crianças e cães.
+Juliana;23;ENG MECANICA;6;3, 5;MASC;A gente pensa demais no tempo que nos resta e acaba não vivendo.
+Maitê;20;BSI;4;3, 6;MASC;Ansiosa para viajar para o nordeste no verão.

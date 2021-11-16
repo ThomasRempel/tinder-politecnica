@@ -1,7 +1,10 @@
 package controlador;
 
+import modelo.UsuariaMulher;
 import modelo.Usuario;
+import modelo.UsuarioHomem;
 import principal.UI;
+import utils.DadosTxt;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,11 +17,15 @@ public class Controlador {
     //inicia a lista de gostos para perguntar para o usuario
     private List<String> listaDeGostosDaAplicacao = new ArrayList<>();
 
+    List<String> listaNova; //Sei la pra que serve
+
+
     UI ui = new UI();
 
     //tudo o que iniciar por primeiro deve estar neste método
     public void iniciaConfiguracoes() {
         ui.iniciaAplicacao();
+        DadosTxt.criaArquivosTxt();
         adicionarGostos();
         ui.bemVindo();
         possuiConta();
@@ -46,15 +53,26 @@ public class Controlador {
 
     public void logar() {
         ui.pedirNome();
+        sc.nextLine();
         String nome = sc.nextLine();
         ui.pedirSenha();
         String senha = sc.nextLine();
+        try{
+            if(validarLogin(nome, senha)){
+                iniciaProgramaPrincipal();
+            }
+        }
+        catch (Exception e) {
 
-        validarLogin(nome, senha);
+        }
     }
 
-    private void validarLogin(String nome, String senha) {
+    private void iniciaProgramaPrincipal() {
+        System.out.println("Pograma Principal");
+    }
 
+    private boolean validarLogin(String nome, String senha) throws Exception{
+        return ControladorTxt.leLinha(nome, senha);
     }
 
     public void cadastrar() {
@@ -63,19 +81,15 @@ public class Controlador {
         String sexo = sc.nextLine();
 
         if (sexo.toLowerCase().equals("m")) {
-            //implementar aqui um novo método para cadastrar caso o usuário seja homem
+            cadastrarHomem();
         }
         else if (sexo.toLowerCase().equals("f")){
-            //implementar aqui um novo método para cadastrar caso a usuária seja mulher
-
-            
+            cadastrarMulher();
         }
+    }
 
-
-        /*          pode utilizar este cadastro como parte da implementação ;)
+    private void cadastrarHomem() {
         System.out.print("Digite seu nome:");
-        //printando sc.nextLine() para não bugar
-        sc.nextLine();
         String nome = sc.nextLine();
         System.out.print("Digite sua senha:");
         String senha = sc.nextLine();
@@ -87,18 +101,81 @@ public class Controlador {
         System.out.print("Digite seu período:");
         int periodo = sc.nextInt();
 
-        String cadastro = "@" + nome +"@" + ""+ "%" + senha + "%" + "" + "&" + idade + "&"+ "" + "$" + curso + "$" + "" + "!" + periodo + "!" + "" + "*" + "Gosto1" +"," + "gosto2" + "*" + "#" + "preferencia" + "#" + "" +  "'" + "Sobre Mim" + "'";
-                //Usuario usuario = new Usuario(nome, senha, idade, curso, periodo, gostos, sobreMim);
+        listaGostos();
+        System.out.println("Digite o que você mais gosta: ");
+        int gosto1 = sc.nextInt();
+        escolheGosto(gosto1);
+        System.out.println("Digite o que você mais gosta: ");
+        int gosto2 = sc.nextInt();
+        escolheGosto(gosto2);
+
+        System.out.print("Digite algo sobre você: ");
+        sc.nextLine();
+        String sobreMim = sc.nextLine();
+
+        String cadastro = nome +";" + senha + ";" + idade + ";" + curso + ";" + periodo + ";" + gosto1 + ";" + gosto2 + ";"  + sobreMim;
+
+        ControladorTxt controladorTxt = new ControladorTxt();
+        ControladorTxt.ControladorTxt(cadastro, "C:\\Windows\\Temp\\perfisMasc");
+
+        UsuarioHomem usuarioHomem = new UsuarioHomem(nome, senha, idade, curso, periodo, listaNova, sobreMim);
+
         System.out.println("Logou com sucesso!");
-*/
+    }
+
+    private void cadastrarMulher() {
+        System.out.print("Digite seu nome:");
+        String nome = sc.nextLine();
+        System.out.print("Digite sua senha:");
+        String senha = sc.nextLine();
+        System.out.print("Digite sua idade:");
+        int idade = sc.nextInt();
+        System.out.print("Digite seu curso:");
+        sc.nextLine();
+        String curso = sc.nextLine();
+        System.out.print("Digite seu período:");
+        int periodo = sc.nextInt();
+
+        listaGostos();
+        System.out.println("Digite o que você mais gosta: ");
+        int gosto1 = sc.nextInt();
+        escolheGosto(gosto1);
+        System.out.println("Digite o que você mais gosta: ");
+        int gosto2 = sc.nextInt();
+        escolheGosto(gosto2);
+
+        System.out.print("Digite algo sobre você: ");
+        sc.nextLine();
+        String sobreMim = sc.nextLine();
+
+        String cadastro = nome +";" + senha + ";" + idade + ";" + curso + ";" + periodo + ";" + gosto1 + ";" + gosto2 + ";"  + sobreMim;
+        ControladorTxt controladorTxt = new ControladorTxt();
+        ControladorTxt.ControladorTxt(cadastro, "C:\\Windows\\Temp\\perfisFem");
+
+        UsuariaMulher usuariaMulher = new UsuariaMulher(nome, senha, idade, curso, periodo, listaNova, sobreMim);
+        System.out.println("Logou com sucesso!");
+    }
+
+    private void listaGostos() {
+        for (String gosto : this.listaDeGostosDaAplicacao) {
+            System.out.println(gosto);
+        }
+    }
+
+    public void escolheGosto(int gosto){
+       if((gosto<6 && gosto>0)){
+            List<String> listaNova = getListaDeGostosDaAplicacao(gosto - 1);
+           //System.out.println(listaNova);
+       }
+    }
 
 
-      //  ControladorTxt controladorTxt = new ControladorTxt();
-       // ControladorTxt.ControladorTxt(cadastro, "C:\\Windows\\Temp\\perfisFem");
+    public List<String> getListaDeGostosDaAplicacao(int gosto) {
+        return listaDeGostosDaAplicacao;
+    }
 
-
-
-
+    public void setListaDeGostosDaAplicacao(List<String> listaDeGostosDaAplicacao) {
+        this.listaDeGostosDaAplicacao = listaDeGostosDaAplicacao;
     }
 
     public List<Usuario> buscarPretendenteAleatoria() {

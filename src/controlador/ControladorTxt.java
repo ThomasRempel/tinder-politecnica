@@ -19,24 +19,38 @@ public class ControladorTxt{
         }
     }
 
-    public static void leLinha(String cadastro) throws Exception {
-        BufferedReader br = new BufferedReader(
-                new InputStreamReader(new FileInputStream("C:\\Windows\\Temp\\perfisTinder\\perfisFem.txt"), "UTF-8"));
-        BufferedReader br2 = new BufferedReader(
-                new InputStreamReader(new FileInputStream("C:\\Windows\\Temp\\perfisTinder\\perfisMasc.txt"), "UTF-8"));
+    public static boolean leLinha(String nome, String senha) throws Exception {
+
+
+        BufferedReader leArquivoFem = new BufferedReader(
+                new InputStreamReader(new FileInputStream("C:\\Windows\\Temp\\perfisFem"), "UTF-8"));
+        BufferedReader leArquivoMasc = new BufferedReader(
+                new InputStreamReader(new FileInputStream("C:\\Windows\\Temp\\perfisMasc"), "UTF-8"));
 
         String linha;
-        boolean logou = false;
 
-        while ((linha = br.readLine()) != null) {
-            if(linha.contains(cadastro)){
-                logou = true;
+        while ((linha = leArquivoFem.readLine()) != null) {
+            String [] logins = linha.split(";");
+            if(nome.equals(logins[0]) && senha.equals(logins[1])){
                 System.out.println("Logado com sucesso!");
+                return true;
             }
         }
-        if (logou == false){
-            System.out.println("Login ou senha incorreta");
+        while ((linha = leArquivoMasc.readLine()) != null) {
+            String [] logins = linha.split(";");
+            if(nome.equals(logins[0]) && senha.equals(logins[1])){
+                System.out.println("Logado com sucesso!");
+                return true;
+            }
         }
-        br.close();
+        System.out.println("Login ou senha incorretos.");
+        leArquivoFem.close();
+        leArquivoMasc.close();
+        return false;
+    }
+
+    private void inicializaArquivoComUsuariosPretendentes() {
+
     }
 }
+
