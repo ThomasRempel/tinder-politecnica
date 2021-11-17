@@ -1,5 +1,7 @@
 package modelo;
 
+import controlador.Controlador;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,8 +11,10 @@ public abstract class Usuario {
     private int idade;
     private String curso;
     private int periodo;
-    private List<String> gostos = new ArrayList<>();
+    private List<String> listaDeGostos = new ArrayList<>();
     private String sobreMim;
+
+    Controlador controlador = new Controlador();
 
     public Usuario(String nome, String senha, int idade, String curso, int periodo, List<String> gostos, String sobreMim) {
         this.nome = nome;
@@ -18,12 +22,22 @@ public abstract class Usuario {
         this.idade = idade;
         this.curso = curso;
         this.periodo = periodo;
-        this.gostos = gostos;
+        this.listaDeGostos = gostos;
         this.sobreMim = sobreMim;
     }
 
-    public Usuario verMeuPerfil(Usuario usuario) {
-        return usuario;
+    public Usuario() {
+    }
+
+    public String verMeuPerfil() {
+        return "==========Meu perfil==========\n" +
+                "Nome: " + nome + "\n" +
+                "Idade: " + idade + "\n" +
+                "Curso: " + curso + "\n" +
+                "Período: " + periodo + "\n" +
+                "Gostos: " + controlador.getListaDeGostosDaAplicacao().get((Integer.parseInt(listaDeGostos.get(0)) + 1)).substring(3, controlador.getListaDeGostosDaAplicacao().get((Integer.parseInt(listaDeGostos.get(0)) + 1)).length()) + " e " +
+                controlador.getListaDeGostosDaAplicacao().get((Integer.parseInt(listaDeGostos.get(1)) + 1)).substring(3, controlador.getListaDeGostosDaAplicacao().get((Integer.parseInt(listaDeGostos.get(1)) + 1)).length()) + "\n" +
+                "Sobre mim: " + sobreMim + "\n";
     }
 
     public Usuario editarPerfil(Usuario usuario) {
@@ -71,11 +85,11 @@ public abstract class Usuario {
     }
 
     public List<String> getGostos() {
-        return gostos;
+        return listaDeGostos;
     }
 
     public void setGostos(List<String> gostos) {
-        this.gostos = gostos;
+        this.listaDeGostos = gostos;
     }
 
     public String getSobreMim() {

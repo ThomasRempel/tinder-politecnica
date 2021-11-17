@@ -13,11 +13,16 @@ public class UI {
 
     }
 
-    public void bemVindo() {
-        System.out.println("Bem vindo ao Tinder da Politécnica! \n");
+    public void jaTemConta() {
         System.out.println("Você já tem uma conta? ");
         System.out.println("1- Sim \n2- Não");
     }
+
+    public void boasVindas() {
+        System.out.println("==============================\n" + "Bem vindo ao Tinder da Politécnica! " + "\n==============================");
+    }
+
+
 
     public void limpaConsole() {
         for(int i = 0; i < 100; i++) {
@@ -39,5 +44,8 @@ public class UI {
         System.out.print("Digite \"M\" para homem ou \"F\" para mulher: ");
     }
 
-
+    public void verPerfilOuBuscarPretendentes() {
+        System.out.println("1- Buscar outros usuários");
+        System.out.println("2- Ver perfil");
+    }
 }
