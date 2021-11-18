@@ -37,7 +37,6 @@ public class ControladorTxt{
             String [] logins = linha.split(";");
             if(nome.equals(logins[0]) && senha.equals(logins[1])) {
                 usuarioLogado = recebeDadosDoUsuario(logins, 'F');
-                System.out.println("Logado com sucesso!");
                 return usuarioLogado;
             }
         }
@@ -45,7 +44,6 @@ public class ControladorTxt{
             String [] logins = linha.split(";");
             if(nome.equals(logins[0]) && senha.equals(logins[1])) {
                 usuarioLogado = recebeDadosDoUsuario(logins, 'M');
-                System.out.println("Logado com sucesso!");
                 return usuarioLogado;
             }
         }

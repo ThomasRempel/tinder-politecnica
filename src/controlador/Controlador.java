@@ -76,6 +76,7 @@ public class Controlador {
     private boolean validarLogin(String nome, String senha) throws Exception {
         if (ControladorTxt.login(nome, senha) != null) {
             usuarioPrincipal = ControladorTxt.login(nome, senha);
+            System.out.println("Logado com sucesso!");
             return true;
         }
         return false;
