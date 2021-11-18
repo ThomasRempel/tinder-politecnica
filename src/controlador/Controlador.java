@@ -107,9 +107,9 @@ public class Controlador {
         System.out.print("Digite seu período:");
         int periodo = sc.nextInt();
         listaGostos();
-        System.out.println("Digite o que você mais gosta: ");
+        System.out.println("Digite o número do que você mais gosta: ");
         int gosto1 = sc.nextInt();
-        System.out.println("Digite o que você mais gosta: ");
+        System.out.println("Digite o número do que você mais gosta: ");
         int gosto2 = sc.nextInt();
         List<String> listaDeGostos = new ArrayList<>();
         listaDeGostos.add(String.valueOf(gosto1));
