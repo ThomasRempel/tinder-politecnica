@@ -15,6 +15,7 @@ public class Controlador {
     Scanner sc = new Scanner(System.in);
     UI ui = new UI();
     Usuario usuarioPrincipal = null;
+    public int opcaoEscolhida;
 
     private static final List<String> listaDeGostosDaAplicacao = new ArrayList<>();
 
@@ -28,7 +29,7 @@ public class Controlador {
     }
 
     public void possuiConta() {
-        int opcaoEscolhida = sc.nextInt();
+        opcaoEscolhida = sc.nextInt();
 
         if (opcaoEscolhida == 1) {
             logar();
@@ -64,13 +65,61 @@ public class Controlador {
     private void iniciaProgramaPrincipal() {
         ui.boasVindas();
         ui.verPerfilOuBuscarPretendentes();
-        int opcaoBuscarPretendentesOuVerPerfil = sc.nextInt();
+        opcaoEscolhida = sc.nextInt();
 
-        if (opcaoBuscarPretendentesOuVerPerfil == 1) {
+        if (opcaoEscolhida == 1) {
 
-        } else if (opcaoBuscarPretendentesOuVerPerfil == 2) {
-            System.out.println(usuarioPrincipal.verMeuPerfil());
+        } else if (opcaoEscolhida == 2) {
+            verPerfil();
         }
+    }
+
+    private void verPerfil() {
+        System.out.println(usuarioPrincipal.verMeuPerfil());
+        ui.editarPerfilOuVoltar();
+        opcaoEscolhida = sc.nextInt();
+
+        if (opcaoEscolhida == 1) {
+            editarPerfil();
+        }
+        else if(opcaoEscolhida == 2) {
+            iniciaProgramaPrincipal();
+        }
+    }
+
+    private void editarPerfil() {
+        opcaoEscolhida = 0;
+        while (opcaoEscolhida != 8) {
+            ui.editarPerfil();
+            opcaoEscolhida = sc.nextInt();
+
+            if (opcaoEscolhida == 1) {
+                editarNome();
+            }
+            else if (opcaoEscolhida == 2) {
+
+            }
+            else if (opcaoEscolhida == 3) {
+
+            }
+            else if (opcaoEscolhida == 4) {
+
+            }
+            else if (opcaoEscolhida == 5) {
+
+            }
+            else if (opcaoEscolhida == 6) {
+
+            }
+            else if (opcaoEscolhida == 7) {
+
+            }
+        }
+        verPerfil();
+    }
+
+    private void editarNome() {
+
     }
 
     private boolean validarLogin(String nome, String senha) throws Exception {

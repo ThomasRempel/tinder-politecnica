@@ -48,4 +48,23 @@ public class UI {
         System.out.println("1- Buscar outros usuários");
         System.out.println("2- Ver perfil");
     }
+
+    public void editarPerfilOuVoltar() {
+        System.out.println("1- Editar perfil");
+        System.out.println("2- Voltar");
+    }
+
+    public void editarPerfil() {
+        System.out.println("O que você deseja alterar?");
+        System.out.println("1- Nome");
+        System.out.println("2- Senha");
+        System.out.println("3- Idade");
+        System.out.println("4- Curso");
+        System.out.println("5- Período");
+        System.out.println("6- Gostos");
+        System.out.println("7- Sobre mim");
+        System.out.println("8- Voltar");
+    }
+
+
 }
