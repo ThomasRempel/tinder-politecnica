@@ -1,6 +1,7 @@
 package modelo;
 
 import controlador.Controlador;
+import exception.ExcecaoCaracter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,6 +40,10 @@ public abstract class Usuario {
                 controlador.getListaDeGostosDaAplicacao().get((Integer.parseInt(listaDeGostos.get(1)) + 1)).substring(3, controlador.getListaDeGostosDaAplicacao().get((Integer.parseInt(listaDeGostos.get(1)) + 1)).length()) + "\n" +
                 "Sobre mim: " + sobreMim + "\n";
     }
+
+    //public void excecoesCaracter(String nome, String curso) throws ExcecaoCaracter {
+       // if(Character.isDigit(nome);
+    //}
 
     public Usuario editarPerfil(Usuario usuario) {
         return usuario;
