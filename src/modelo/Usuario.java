@@ -1,6 +1,7 @@
 package modelo;
 
 import controlador.Controlador;
+import exception.ExcecaoCaracter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,8 +36,8 @@ public abstract class Usuario {
                 "Idade: " + idade + "\n" +
                 "Curso: " + curso + "\n" +
                 "Período: " + periodo + "\n" +
-                "Gostos: " + controlador.getListaDeGostosDaAplicacao().get((Integer.parseInt(listaDeGostos.get(0)) + 1)).substring(3, controlador.getListaDeGostosDaAplicacao().get((Integer.parseInt(listaDeGostos.get(0)) + 1)).length()) + " e " +
-                controlador.getListaDeGostosDaAplicacao().get((Integer.parseInt(listaDeGostos.get(1)) + 1)).substring(3, controlador.getListaDeGostosDaAplicacao().get((Integer.parseInt(listaDeGostos.get(1)) + 1)).length()) + "\n" +
+                "Gostos: " + controlador.getListaDeGostosDaAplicacao().get((Integer.parseInt(listaDeGostos.get(0)) - 1)).substring(3, controlador.getListaDeGostosDaAplicacao().get((Integer.parseInt(listaDeGostos.get(0)) - 1)).length()) + " e " +
+                controlador.getListaDeGostosDaAplicacao().get((Integer.parseInt(listaDeGostos.get(1)) - 1)).substring(3, controlador.getListaDeGostosDaAplicacao().get((Integer.parseInt(listaDeGostos.get(1)) - 1)).length()) + "\n" +
                 "Sobre mim: " + sobreMim + "\n";
     }
 
