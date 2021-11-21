@@ -5,7 +5,11 @@ import modelo.Usuario;
 import modelo.UsuarioHomem;
 import principal.UI;
 import utils.DadosTxt;
+import exception.ExcecaoCaracter;
+import exception.ExcecaoNumero;
 
+
+import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -16,6 +20,9 @@ public class Controlador {
     UI ui = new UI();
     Usuario usuarioPrincipal = null;
     public int opcaoEscolhida;
+    public int match;
+
+    ControladorTxt controladorTxt = new ControladorTxt();
 
     private static final List<String> listaDeGostosDaAplicacao = new ArrayList<>();
 
@@ -58,7 +65,7 @@ public class Controlador {
                 iniciaProgramaPrincipal();
             }
         } catch (Exception e) {
-
+            e.printStackTrace();
         }
     }
 
@@ -68,7 +75,7 @@ public class Controlador {
         opcaoEscolhida = sc.nextInt();
 
         if (opcaoEscolhida == 1) {
-
+            controladorTxt.buscarPretendente(usuarioPrincipal.getGostos());
         } else if (opcaoEscolhida == 2) {
             verPerfil();
         }
@@ -144,21 +151,31 @@ public class Controlador {
     }
 
     private void cadastrarHomem() {
+        String nome;
+
         System.out.print("Digite seu nome:");
-        String nome = sc.nextLine();
-        System.out.print("Digite sua senha:");
+        nome = sc.nextLine();
+        //verificaCaracter(nome);
+
+        System.out.print("Digite sua senha: ");
         String senha = sc.nextLine();
-        System.out.print("Digite sua idade:");
+
+        System.out.print("Digite sua idade: ");
         int idade = sc.nextInt();
-        System.out.print("Digite seu curso:");
+        //verificaNumero(idade);
+
+        System.out.print("Digite seu curso: ");
         sc.nextLine();
         String curso = sc.nextLine();
-        System.out.print("Digite seu período:");
+        //verificaCaracter(curso);
+
+        System.out.print("Digite seu período: ");
         int periodo = sc.nextInt();
+
         listaGostos();
-        System.out.println("Digite o número do que você mais gosta: ");
+        System.out.println("Digite o que você mais gosta: ");
         int gosto1 = sc.nextInt();
-        System.out.println("Digite o número do que você mais gosta: ");
+        System.out.println("Digite o que você mais gosta: ");
         int gosto2 = sc.nextInt();
         List<String> listaDeGostos = new ArrayList<>();
         listaDeGostos.add(String.valueOf(gosto1));
@@ -176,7 +193,24 @@ public class Controlador {
         UsuarioHomem usuarioHomem = new UsuarioHomem(nome, senha, idade, curso, periodo, listaDeGostos, sobreMim);
 
         System.out.println("Logou com sucesso!");
+
     }
+    /*private void verificaCaracter(String objeto) throws ExcecaoCaracter {
+        KeyEvent evt = null;
+        String caracteres = "0987654321";// lista de caracters que não devem ser aceitos
+
+        if (caracteres.contains(evt.getKeyChar() + "")) {// se o character que gerou o
+            throw new ExcecaoCaracter("Dígito inválido. Use apenas caracteres não numéricos");
+        }
+    }
+
+    private void verificaNumero(int objeto) throws ExcecaoNumero{
+        if (String.valueOf(objeto) == null || String.valueOf(objeto).isEmpty()) {
+            throw new ExcecaoNumero("Dígito inválido. Use apenas caracteres numéricos");
+
+        }
+    }*/
+
 
     private void cadastrarMulher() {
         System.out.print("Digite seu nome:");
@@ -222,16 +256,25 @@ public class Controlador {
         return listaDeGostosDaAplicacao;
     }
 
-    public List<Usuario> buscarPretendenteAleatoria() {
-        return null;
+    public boolean darMatch() {
+        System.out.println("Você gostou deste usuário ?");
+        System.out.println("1 - Sim");
+        System.out.println("2 - Não");
+        System.out.println("3 - Voltar para o menu");
+        opcaoEscolhida = sc.nextInt();
+
+        if (opcaoEscolhida == 1) {
+            System.out.println("Parabéns! Aí está o amor da sua vida!");
+            return true;
+        }else if(opcaoEscolhida == 3){
+            iniciaProgramaPrincipal();
+        }
+        return false;
     }
 
-    public List<Usuario> buscarPretendenteEspecifico() {
-        return null;
+    public String perguntaPreferencia() {
+        ui.oqueVoceEstaBuscando();
+        String sexo = sc.nextLine();
+        return sexo;
     }
-
-    public void darMatch() {
-
-    }
-
 }

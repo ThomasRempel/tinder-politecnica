@@ -44,6 +44,11 @@ public class UI {
         System.out.print("Digite \"M\" para homem ou \"F\" para mulher: ");
     }
 
+    public void oqueVoceEstaBuscando(){
+        System.out.println("Você prefere homem ou mulher?");
+        System.out.println("Digite \"H\" para homem ou \"M\" para mulher: ");
+    }
+
     public void verPerfilOuBuscarPretendentes() {
         System.out.println("1- Buscar outros usuários");
         System.out.println("2- Ver perfil");
