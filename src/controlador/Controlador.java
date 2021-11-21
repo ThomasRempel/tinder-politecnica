@@ -125,10 +125,7 @@ public class Controlador {
     private boolean validarLogin(String nome, String senha) throws Exception {
         if (ControladorTxt.login(nome, senha) != null) {
             usuarioPrincipal = ControladorTxt.login(nome, senha);
-            System.out.println(
-                    "\n" + "\n" + "╭═══════════════════════╮\n" +
-                    "  Logado com sucesso!\n" +
-                    "╰═══════════════════════╯" + "\n" + "\n");
+            ui.validarLogin();
             return true;
         }
         return false;
@@ -298,12 +295,7 @@ public class Controlador {
         opcaoEscolhida = sc.nextInt();
 
         if (opcaoEscolhida == 1) {
-
-            System.out.println("ℙ\uD835\uDD52\uD835\uDD63\uD835\uDD52\uD835\uDD53\uD835\uDD56\uD835\uDD5F\uD835\uDD64❕" +
-                    " \uD835\uDD3B\uD835\uDD56\uD835\uDD66 \uD835\uDD44\uD835\uDD52\uD835\uDD65\uD835\uDD54\uD835\uDD59❕ " +
-                    "\uD835\uDD38\uD835\uDD5A \uD835\uDD56\uD835\uDD64\uD835\uDD65\uD835\uDD52 " +
-                    "\uD835\uDD60 \uD835\uDD52\uD835\uDD5E\uD835\uDD60\uD835\uDD63 " +
-                    "\uD835\uDD55\uD835\uDD52 \uD835\uDD64\uD835\uDD66\uD835\uDD52 \uD835\uDD67\uD835\uDD5A\uD835\uDD55\uD835\uDD52❕");
+            ui.darMatch();
             return true;
         } else if (opcaoEscolhida == 3) {
             iniciaProgramaPrincipal();
