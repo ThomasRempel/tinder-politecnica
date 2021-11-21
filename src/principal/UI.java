@@ -41,7 +41,7 @@ public class UI {
 
     public void homemOuMulher() {
         System.out.println("Qual o seu sexo?");
-        System.out.print("Digite \"M\" para homem ou \"F\" para mulher: ");
+        System.out.print("Digite \"H\" para homem ou \"M\" para mulher: ");
     }
 
     public void oqueVoceEstaBuscando(){
