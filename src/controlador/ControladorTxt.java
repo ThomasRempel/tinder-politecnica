@@ -8,19 +8,18 @@ import principal.UI;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 
 public class ControladorTxt {
-    private static Controlador controlador;
     UI ui = new UI();
 
-
-    public static void ControladorTxt(String conteudo, String nomeArquivo) {
+    public static void inseriUsuario(String conteudo, String nomeArquivo) {
         try {
-            Writer bw;
-            bw = new BufferedWriter(new FileWriter(nomeArquivo, true));
-            bw.write("\n" + conteudo);
-            bw.close();
+            Writer criandoLinhaTxt;
+            criandoLinhaTxt = new BufferedWriter(new FileWriter(nomeArquivo, true));
+            criandoLinhaTxt.write("\n" + conteudo);
+            criandoLinhaTxt.close();
         } catch (UnsupportedEncodingException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -76,7 +75,7 @@ public class ControladorTxt {
     }
 
     public static void buscarPretendente(List<String> listaDeGostosUsuarioPrincipal) {
-        controlador = new Controlador();
+        Controlador controlador = new Controlador();
         String linha;
         boolean deuMatch = false;
         String sexo = controlador.perguntaPreferencia();
@@ -89,15 +88,10 @@ public class ControladorTxt {
                     while ((linha = leArquivoMasc.readLine()) != null) {
                         if (deuMatch == false) {
                             String[] bot = linha.split(";");
-                            if (((listaDeGostosUsuarioPrincipal.get(0).equals(bot[5]) || (listaDeGostosUsuarioPrincipal.get(0).equals(bot[6])))
-                                    || (listaDeGostosUsuarioPrincipal.get(1).equals(bot[6]) || listaDeGostosUsuarioPrincipal.get(1).equals(bot[5])))) {
-                                System.out.println(bot[0] + " ; " + bot[2] + " ; " + bot[3] + " ; " + bot[4] + " ; " + "Gostos: " + controlador.getListaDeGostosDaAplicacao().get(Integer.parseInt(bot[5]) - 1).substring(3,
-                                        controlador.getListaDeGostosDaAplicacao().get(Integer.parseInt(bot[5]) - 1).length()) + " , " +
-                                        controlador.getListaDeGostosDaAplicacao().get(Integer.parseInt(bot[6]) - 1).substring(3, controlador.getListaDeGostosDaAplicacao().get(Integer.parseInt(bot[6]) - 1).length())
-                                        + " ; " + bot[7]);
-                                if (controlador.darMatch()) {
-                                    deuMatch = true;
-                                }
+                            logicaDoMatch(listaDeGostosUsuarioPrincipal, bot, controlador);
+
+                            if (darMatch(controlador)) {
+                                deuMatch = true;
                             }
                         }
                     }
@@ -112,15 +106,9 @@ public class ControladorTxt {
                     while ((linha = leArquivoFem.readLine()) != null) {
                         if (deuMatch == false) {
                             String[] bot = linha.split(";");
-                            if (((listaDeGostosUsuarioPrincipal.get(0).equals(bot[5]) || (listaDeGostosUsuarioPrincipal.get(0).equals(bot[6])))
-                                || (listaDeGostosUsuarioPrincipal.get(1).equals(bot[6]) || listaDeGostosUsuarioPrincipal.get(1).equals(bot[5])))) {
-                                System.out.println(bot[0] + " ; " + bot[2] + " ; " + bot[3] + " ; " + bot[4] + " ; " + "Gostos: " + controlador.getListaDeGostosDaAplicacao().get(Integer.parseInt(bot[5]) - 1).substring(3,
-                                        controlador.getListaDeGostosDaAplicacao().get(Integer.parseInt(bot[5]) - 1).length()) + " , " +
-                                        controlador.getListaDeGostosDaAplicacao().get(Integer.parseInt(bot[6]) - 1).substring(3, controlador.getListaDeGostosDaAplicacao().get(Integer.parseInt(bot[6]) - 1).length())
-                                        + " ; " + bot[7]);
-                                if (controlador.darMatch()) {
-                                    deuMatch = true;
-                                }
+                            logicaDoMatch(listaDeGostosUsuarioPrincipal, bot, controlador);
+                            if (darMatch(controlador)) {
+                                deuMatch = true;
                             }
                         }
                     }
@@ -130,5 +118,38 @@ public class ControladorTxt {
             }
         }
     }
+
+    /*Tivemos que colocar este método aqui por conta de problemas de instanciação do Controlador para o ControladorTxt, sendo assim
+    instanciamos o Scanner dentro do método */
+    public static boolean darMatch(Controlador controlador) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Você gostou deste usuário ?");
+        System.out.println("1 - Sim");
+        System.out.println("2 - Não");
+        System.out.println("3 - Voltar para o menu");
+        int opcaoEscolhida = sc.nextInt();
+
+        if (opcaoEscolhida == 1) {
+            UI.darMatch();
+            return true;
+        } else if (opcaoEscolhida == 3) {
+            controlador.iniciaProgramaPrincipal();
+        }
+        return false;
+    }
+
+    private static void logicaDoMatch(List<String> listaDeGostosUsuarioPrincipal, String[] bot, Controlador controlador) {
+        if (((listaDeGostosUsuarioPrincipal.get(0).equals(bot[5]) || (listaDeGostosUsuarioPrincipal.get(0).equals(bot[6])))
+                || (listaDeGostosUsuarioPrincipal.get(1).equals(bot[6]) || listaDeGostosUsuarioPrincipal.get(1).equals(bot[5])))) {
+            System.out.println(bot[0] + " ; " + bot[2] + " ; " + bot[3] + " ; " + bot[4] + " ; " + "Gostos: " + controlador.getListaDeGostosDaAplicacao()
+                    .get(Integer.parseInt(bot[5]) - 1).substring(3, controlador.getListaDeGostosDaAplicacao().get(Integer.parseInt(bot[5]) - 1).length())
+                    + " , " + controlador.getListaDeGostosDaAplicacao().get(Integer.parseInt(bot[6]) - 1).
+                    substring(3, controlador.getListaDeGostosDaAplicacao().get(Integer.parseInt(bot[6]) - 1).length())
+                    + " ; " + bot[7]);
+        }
+    }
+
+
 }
+
 

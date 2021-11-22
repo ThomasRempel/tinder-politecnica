@@ -2,7 +2,6 @@ package principal;
 
 import controlador.Controlador;
 import controlador.ControladorTxt;
-
 import java.util.Scanner;
 
 public class Principal {

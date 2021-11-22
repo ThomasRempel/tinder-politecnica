@@ -18,17 +18,16 @@ import java.util.Scanner;
 public class Controlador {
     Scanner sc = new Scanner(System.in);
     UI ui = new UI();
+    ControladorTxt controladorTxt = new ControladorTxt();
+    private static final List<String> listaDeGostosDaAplicacao = new ArrayList<>();
+
     Usuario usuarioPrincipal = null;
     public int opcaoEscolhida;
     public int match;
 
-    ControladorTxt controladorTxt = new ControladorTxt();
-
-    private static final List<String> listaDeGostosDaAplicacao = new ArrayList<>();
-
-    //tudo o que iniciar por primeiro deve estar neste método
     public void iniciaConfiguracoes() {
         ui.iniciaAplicacao();
+        pause(3000);
         DadosTxt.criaArquivosTxt();
         adicionarGostos();
         ui.jaTemConta();
@@ -69,7 +68,7 @@ public class Controlador {
         }
     }
 
-    private void iniciaProgramaPrincipal() {
+    public void iniciaProgramaPrincipal() {
         ui.boasVindas();
         ui.verPerfilOuBuscarPretendentes();
         opcaoEscolhida = sc.nextInt();
@@ -79,6 +78,7 @@ public class Controlador {
         } else if (opcaoEscolhida == 2) {
             verPerfil();
         }
+
     }
 
     private void verPerfil() {
@@ -144,7 +144,7 @@ public class Controlador {
     }
 
     private void cadastrarHomem() {
-        System.out.println( "\n" + "Iniciando cadastro..." + "\n");
+        System.out.println("\n" + "Iniciando cadastro..." + "\n");
         pause(3500);
         try {
             System.out.print("Digite seu nome:");
@@ -182,8 +182,8 @@ public class Controlador {
 
             String cadastro = nome + ";" + senha + ";" + idade + ";" + curso + ";" + periodo + ";" + gosto1 + ";" + gosto2 + ";" + sobreMim;
 
-            ControladorTxt.ControladorTxt(cadastro, "C:\\Windows\\Temp\\perfisMasc.txt");
-            ControladorTxt controladorTxt = new ControladorTxt();
+            ControladorTxt.inseriUsuario(cadastro, "C:\\Windows\\Temp\\perfisMasc.txt");
+            ControladorTxt inseriUsuario = new ControladorTxt();
             UsuarioHomem usuarioHomem = new UsuarioHomem(nome, senha, idade, curso, periodo, listaDeGostos, sobreMim);
 
             System.out.println("Logou com sucesso!");
@@ -191,15 +191,16 @@ public class Controlador {
             e.getMessage();
         } catch (ExcecaoNumero e1) {
             e1.getMessage();
-        } catch (Exception e2){
+        } catch (Exception e2) {
             System.out.println("Somente caracteres númericos");
             cadastrarHomem();
         }
+        iniciaProgramaPrincipal();
     }
 
-    private void cadastrarMulher(){
-        System.out.println( "\n" + "Iniciando cadastro..." + "\n");
-        pause(5000);
+    private void cadastrarMulher() {
+        System.out.println("\n" + "Iniciando cadastro..." + "\n");
+        pause(3500);
         try {
             System.out.print("Digite seu nome:");
             String nome = sc.nextLine();
@@ -236,8 +237,8 @@ public class Controlador {
 
             String cadastro = nome + ";" + senha + ";" + idade + ";" + curso + ";" + periodo + ";" + gosto1 + ";" + gosto2 + ";" + sobreMim;
 
-            ControladorTxt.ControladorTxt(cadastro, "C:\\Windows\\Temp\\perfisMasc.txt");
-            ControladorTxt controladorTxt = new ControladorTxt();
+            ControladorTxt.inseriUsuario(cadastro, "C:\\Windows\\Temp\\perfisMasc.txt");
+            ControladorTxt inseriUsuario = new ControladorTxt();
             UsuarioHomem usuarioHomem = new UsuarioHomem(nome, senha, idade, curso, periodo, listaDeGostos, sobreMim);
 
             System.out.println("Logou com sucesso!");
@@ -247,11 +248,12 @@ public class Controlador {
         } catch (ExcecaoNumero e1) {
             System.out.println(e1.getMessage());
             cadastrarMulher();
-        } catch (Exception e2){
+        } catch (Exception e2) {
             System.out.println("Só é válido caracteres númericos");
             sc.nextLine();
             cadastrarMulher();
         }
+        iniciaProgramaPrincipal();
     }
 
     public void validaCaracter(String objeto) throws ExcecaoCaracter {
@@ -285,22 +287,6 @@ public class Controlador {
 
     public List<String> getListaDeGostosDaAplicacao() {
         return listaDeGostosDaAplicacao;
-    }
-
-    public boolean darMatch() {
-        System.out.println("Você gostou deste usuário ?");
-        System.out.println("1 - Sim");
-        System.out.println("2 - Não");
-        System.out.println("3 - Voltar para o menu");
-        opcaoEscolhida = sc.nextInt();
-
-        if (opcaoEscolhida == 1) {
-            ui.darMatch();
-            return true;
-        } else if (opcaoEscolhida == 3) {
-            iniciaProgramaPrincipal();
-        }
-        return false;
     }
 
     public String perguntaPreferencia() {
