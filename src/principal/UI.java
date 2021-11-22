@@ -32,7 +32,15 @@ public class UI {
 
     public void pedirNome() {
         System.out.print("Insira seu nome: ");
+    }
 
+    public void atualizarNome() {
+        System.out.print("Insira seu novo nome: ");
+    }
+    public void nomeAtualizadoComSucesso() {
+        System.out.println("===========================");
+        System.out.println("Nome alterado com sucesso!");
+        System.out.println("===========================");
     }
 
     public void pedirSenha() {

@@ -15,6 +15,7 @@ public class Controlador {
     Scanner sc = new Scanner(System.in);
     UI ui = new UI();
     Usuario usuarioPrincipal = null;
+    Usuario usuarioDesatualizado = null;
     public int opcaoEscolhida;
 
     private static final List<String> listaDeGostosDaAplicacao = new ArrayList<>();
@@ -58,11 +59,11 @@ public class Controlador {
                 iniciaProgramaPrincipal();
             }
         } catch (Exception e) {
-
+            e.printStackTrace();
         }
     }
 
-    private void iniciaProgramaPrincipal() {
+    private void iniciaProgramaPrincipal() throws Exception {
         ui.boasVindas();
         ui.verPerfilOuBuscarPretendentes();
         opcaoEscolhida = sc.nextInt();
@@ -74,7 +75,7 @@ public class Controlador {
         }
     }
 
-    private void verPerfil() {
+    private void verPerfil() throws Exception {
         System.out.println(usuarioPrincipal.verMeuPerfil());
         ui.editarPerfilOuVoltar();
         opcaoEscolhida = sc.nextInt();
@@ -87,7 +88,7 @@ public class Controlador {
         }
     }
 
-    private void editarPerfil() {
+    private void editarPerfil() throws Exception {
         opcaoEscolhida = 0;
         while (opcaoEscolhida != 8) {
             ui.editarPerfil();
@@ -115,16 +116,22 @@ public class Controlador {
 
             }
         }
+        //ControladorTxt.atualizaDadosDeLoginNoArquivo(usuarioDesatualizado, usuarioPrincipal);
         verPerfil();
     }
 
     private void editarNome() {
-
+        ui.atualizarNome();
+        sc.nextLine();
+        String novoNome = sc.nextLine();
+        usuarioPrincipal.setNome(novoNome);
+        ui.nomeAtualizadoComSucesso();
     }
 
     private boolean validarLogin(String nome, String senha) throws Exception {
         if (ControladorTxt.login(nome, senha) != null) {
             usuarioPrincipal = ControladorTxt.login(nome, senha);
+            usuarioDesatualizado = ControladorTxt.login(nome, senha);
             System.out.println("Logado com sucesso!");
             return true;
         }

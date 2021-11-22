@@ -1,19 +1,25 @@
 package controlador;
+
 import modelo.UsuariaMulher;
 import modelo.Usuario;
 import modelo.UsuarioHomem;
 
 import java.io.*;
+import java.nio.channels.FileChannel;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ControladorTxt{
+import static java.nio.file.StandardCopyOption.REPLACE_EXISTING;
+
+public class ControladorTxt {
 
     public static void ControladorTxt(String conteudo, String nomeArquivo) {
         try {
             Writer bw;
             bw = new BufferedWriter(new FileWriter(nomeArquivo, true));
-            bw.write(conteudo + "\n");
+            bw.write("\n" + conteudo);
             bw.close();
         } catch (UnsupportedEncodingException e) {
             // TODO Auto-generated catch block
@@ -34,16 +40,20 @@ public class ControladorTxt{
                 new InputStreamReader(new FileInputStream("C:\\Windows\\Temp\\perfisMasc.txt"), "UTF-8"));
 
         while ((linha = leArquivoFem.readLine()) != null) {
-            String [] logins = linha.split(";");
-            if(nome.equals(logins[0]) && senha.equals(logins[1])) {
+            String[] logins = linha.split(";");
+            if (nome.equals(logins[0]) && senha.equals(logins[1])) {
                 usuarioLogado = recebeDadosDoUsuario(logins, 'F');
+                leArquivoFem.close();
+                leArquivoMasc.close();
                 return usuarioLogado;
             }
         }
         while ((linha = leArquivoMasc.readLine()) != null) {
-            String [] logins = linha.split(";");
-            if(nome.equals(logins[0]) && senha.equals(logins[1])) {
+            String[] logins = linha.split(";");
+            if (nome.equals(logins[0]) && senha.equals(logins[1])) {
                 usuarioLogado = recebeDadosDoUsuario(logins, 'M');
+                leArquivoFem.close();
+                leArquivoMasc.close();
                 return usuarioLogado;
             }
         }
@@ -62,12 +72,77 @@ public class ControladorTxt{
             Usuario usuariaMulher = new UsuariaMulher(logins[0], logins[1], Integer.parseInt(logins[2]), logins[3], Integer.parseInt(logins[4]),
                     gostos, logins[6]);
             return usuariaMulher;
-        }
-        else {
+        } else {
             Usuario usuarioHomem = new UsuarioHomem(logins[0], logins[1], Integer.parseInt(logins[2]), logins[3], Integer.parseInt(logins[4]),
                     gostos, logins[6]);
             return usuarioHomem;
         }
     }
+
+    /*public static void atualizaDadosDeLoginNoArquivo(Usuario usuarioDesatualizado, Usuario usuarioAtualizado) throws Exception {
+        Writer bw = null;
+        boolean existeRegistroNoArquivo = false;
+        File arquivoAntigo = null;
+        File arquivoNovo = null;
+        String linha;
+
+        BufferedReader leArquivoFem = new BufferedReader(
+                new InputStreamReader(new FileInputStream("C:\\Windows\\Temp\\perfisFem.txt"), "UTF-8"));
+        BufferedReader leArquivoMasc = new BufferedReader(
+                new InputStreamReader(new FileInputStream("C:\\Windows\\Temp\\perfisMasc.txt"), "UTF-8"));
+
+        while ((linha = leArquivoFem.readLine()) != null) {
+            arquivoNovo = new File("C:\\Windows\\Temp\\perfisFemTemp.txt");
+            bw = new BufferedWriter(new FileWriter("C:\\Windows\\Temp\\perfisFem.txt", true));
+            String[] usuarioLido = linha.split(";");
+
+            //verifica se o usuario logado esta nesse arquivo
+            if (!(usuarioDesatualizado.getNome().equals(usuarioLido[0]) && usuarioDesatualizado.getSenha().equals(usuarioLido[1]) && usuarioDesatualizado.getIdade() == Integer.parseInt(usuarioLido[2]))) {
+                bw.write(linha);
+            }
+            else {
+                bw.write(usuarioAtualizado.getNome() + ";" + usuarioAtualizado.getSenha()
+                        + ";" + usuarioAtualizado.getIdade() + ";" + usuarioAtualizado.getCurso() + ";" + usuarioAtualizado.getPeriodo()
+                        + ";" + usuarioAtualizado.getGostos().get(0) + ";" + usuarioAtualizado.getGostos().get(1) + ";" + usuarioAtualizado.getSobreMim());
+                existeRegistroNoArquivo = true;
+            }
+        }
+        if (existeRegistroNoArquivo) {
+            bw.flush();
+            arquivoAntigo = new File("C:\\Windows\\Temp\\perfisFem.txt");
+        }
+
+        //resetando o valor da variavel
+        existeRegistroNoArquivo = false;
+
+        while ((linha = leArquivoMasc.readLine()) != null) {
+            arquivoNovo = new File("C:\\Windows\\Temp\\perfisMascTemp.txt");
+            bw = new BufferedWriter(new FileWriter("C:\\Windows\\Temp\\perfisMascTemp.txt", true));
+            String[] usuarioLido = linha.split(";");
+
+            //verifica se o usuario logado esta nesse arquivo
+            if (!(usuarioDesatualizado.getNome().equals(usuarioLido[0]) && usuarioDesatualizado.getSenha().equals(usuarioLido[1]) && usuarioDesatualizado.getIdade() == Integer.parseInt(usuarioLido[2]))) {
+                bw.write(linha);
+                bw.flush();
+            }
+            else {
+                bw.write(usuarioAtualizado.getNome() + ";" + usuarioAtualizado.getSenha()
+                        + ";" + usuarioAtualizado.getIdade() + ";" + usuarioAtualizado.getCurso() + ";" + usuarioAtualizado.getPeriodo()
+                        + ";" + usuarioAtualizado.getGostos().get(0) + ";" + usuarioAtualizado.getGostos().get(1) + ";" + usuarioAtualizado.getSobreMim());
+                existeRegistroNoArquivo = true;
+            }
+        }
+        if (existeRegistroNoArquivo) {
+            bw.close();
+            leArquivoMasc.close();
+            leArquivoFem.close();
+            arquivoAntigo = new File("C:\\Windows\\Temp\\perfisMasc.txt");
+            //if (arquivoAntigo.exists()) {
+            //    arquivoAntigo.delete();
+            //}
+            boolean sucesso = arquivoNovo.renameTo(arquivoAntigo);
+            System.out.println(sucesso);
+        }
+    } */
 }
 

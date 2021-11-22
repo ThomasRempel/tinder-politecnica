@@ -41,10 +41,6 @@ public abstract class Usuario {
                 "Sobre mim: " + sobreMim + "\n";
     }
 
-    //public void excecoesCaracter(String nome, String curso) throws ExcecaoCaracter {
-       // if(Character.isDigit(nome);
-    //}
-
     public Usuario editarPerfil(Usuario usuario) {
         return usuario;
     }
