@@ -108,6 +108,7 @@ public class DadosTxt {
 
                 //atualiza o txt com as novas informações
                 arquivoTxtFem.flush();
+                arquivoTxtFem.close();
             }
             if (!verificaSeArquivoMascExiste()) {
                 arquivoTxtMasc = new BufferedWriter((new FileWriter("C:\\Windows\\Temp\\perfisMasc.txt")));
@@ -115,8 +116,8 @@ public class DadosTxt {
 
                 //atualiza o txt com as novas informações
                 arquivoTxtMasc.flush();
+                arquivoTxtMasc.close();
             }
-
         } catch (Exception e) {
             e.printStackTrace();
         }
