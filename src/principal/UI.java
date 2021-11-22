@@ -1,8 +1,6 @@
 package principal;
 
 public class UI {
-    public UI() {
-    }
 
     public void iniciaAplicacao() {
         System.out.println("\n" + "\n" +"==============================");

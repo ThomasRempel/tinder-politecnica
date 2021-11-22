@@ -195,7 +195,6 @@ public class Controlador {
             System.out.println("Somente caracteres númericos");
             cadastrarHomem();
         }
-        iniciaProgramaPrincipal();
     }
 
     private void cadastrarMulher() {
@@ -253,7 +252,6 @@ public class Controlador {
             sc.nextLine();
             cadastrarMulher();
         }
-        iniciaProgramaPrincipal();
     }
 
     public void validaCaracter(String objeto) throws ExcecaoCaracter {
