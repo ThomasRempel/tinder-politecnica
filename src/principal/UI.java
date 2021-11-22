@@ -1,46 +1,44 @@
 package principal;
 
 public class UI {
-    public UI() {
-    }
 
     public void iniciaAplicacao() {
-        System.out.println("==============================");
+        System.out.println("\n" + "\n" +"==============================");
         System.out.println("Iniciando aplicação...");
-        System.out.println("==============================");
-
-        //limpaConsole();
-
+        System.out.println("==============================" + "\n");
     }
 
     public void jaTemConta() {
-        System.out.println("Você já tem uma conta? ");
+        System.out.println("\n" + "\n" +"Você já tem uma conta? ");
         System.out.println("1- Sim \n2- Não");
     }
 
     public void boasVindas() {
-        System.out.println("==============================\n" + "Bem vindo ao Tinder da Politécnica! " + "\n==============================");
-    }
-
-
-
-    public void limpaConsole() {
-        for(int i = 0; i < 100; i++) {
-            System.out.println("");
-        }
+        System.out.println("\n" + "\n" + "==============================\n" + "\n" +
+                "██████╗░███████╗███╗░░░███╗  ██╗░░░██╗██╗███╗░░██╗██████╗░░█████╗░  ░█████╗░░█████╗░\n" +
+                "██╔══██╗██╔════╝████╗░████║  ██║░░░██║██║████╗░██║██╔══██╗██╔══██╗  ██╔══██╗██╔══██╗\n" +
+                "██████╦╝█████╗░░██╔████╔██║  ╚██╗░██╔╝██║██╔██╗██║██║░░██║██║░░██║  ███████║██║░░██║\n" +
+                "██╔══██╗██╔══╝░░██║╚██╔╝██║  ░╚████╔╝░██║██║╚████║██║░░██║██║░░██║  ██╔══██║██║░░██║\n" +
+                "██████╦╝███████╗██║░╚═╝░██║  ░░╚██╔╝░░██║██║░╚███║██████╔╝╚█████╔╝  ██║░░██║╚█████╔╝\n" +
+                "╚═════╝░╚══════╝╚═╝░░░░░╚═╝  ░░░╚═╝░░░╚═╝╚═╝░░╚══╝╚═════╝░░╚════╝░  ╚═╝░░╚═╝░╚════╝░\n" +
+                "\n" +
+                "████████╗██╗███╗░░██╗██████╗░███████╗██████╗░  ██████╗░░█████╗░\n" +
+                "╚══██╔══╝██║████╗░██║██╔══██╗██╔════╝██╔══██╗  ██╔══██╗██╔══██╗\n" +
+                "░░░██║░░░██║██╔██╗██║██║░░██║█████╗░░██████╔╝  ██║░░██║███████║\n" +
+                "░░░██║░░░██║██║╚████║██║░░██║██╔══╝░░██╔══██╗  ██║░░██║██╔══██║\n" +
+                "░░░██║░░░██║██║░╚███║██████╔╝███████╗██║░░██║  ██████╔╝██║░░██║\n" +
+                "░░░╚═╝░░░╚═╝╚═╝░░╚══╝╚═════╝░╚══════╝╚═╝░░╚═╝  ╚═════╝░╚═╝░░╚═╝\n" +
+                "\n" +
+                "██████╗░░█████╗░██╗░░░░░██╗████████╗███████╗░█████╗░███╗░░██╗██╗░█████╗░░█████╗░  ██╗\n" +
+                "██╔══██╗██╔══██╗██║░░░░░██║╚══██╔══╝██╔════╝██╔══██╗████╗░██║██║██╔══██╗██╔══██╗  ██║\n" +
+                "██████╔╝██║░░██║██║░░░░░██║░░░██║░░░█████╗░░██║░░╚═╝██╔██╗██║██║██║░░╚═╝███████║  ██║\n" +
+                "██╔═══╝░██║░░██║██║░░░░░██║░░░██║░░░██╔══╝░░██║░░██╗██║╚████║██║██║░░██╗██╔══██║  ╚═╝\n" +
+                "██║░░░░░╚█████╔╝███████╗██║░░░██║░░░███████╗╚█████╔╝██║░╚███║██║╚█████╔╝██║░░██║  ██╗\n" +
+                "╚═╝░░░░░░╚════╝░╚══════╝╚═╝░░░╚═╝░░░╚══════╝░╚════╝░╚═╝░░╚══╝╚═╝░╚════╝░╚═╝░░╚═╝  ╚═╝ " + "\n==============================");
     }
 
     public void pedirNome() {
         System.out.print("Insira seu nome: ");
-    }
-
-    public void atualizarNome() {
-        System.out.print("Insira seu novo nome: ");
-    }
-    public void nomeAtualizadoComSucesso() {
-        System.out.println("===========================");
-        System.out.println("Nome alterado com sucesso!");
-        System.out.println("===========================");
     }
 
     public void pedirSenha() {
@@ -49,7 +47,12 @@ public class UI {
 
     public void homemOuMulher() {
         System.out.println("Qual o seu sexo?");
-        System.out.print("Digite \"M\" para homem ou \"F\" para mulher: ");
+        System.out.print("Digite \"H\" para homem ou \"M\" para mulher: ");
+    }
+
+    public static void oqueVoceEstaBuscando(){
+        System.out.println("Você prefere homem ou mulher?");
+        System.out.println("Digite \"H\" para homem ou \"M\" para mulher: ");
     }
 
     public void verPerfilOuBuscarPretendentes() {
@@ -74,5 +77,20 @@ public class UI {
         System.out.println("8- Voltar");
     }
 
+    public void validarLogin() {
+        System.out.println(
+                "\n" + "\n" + "╭═══════════════════════╮\n" +
+                        "  Logado com sucesso!\n" +
+                        "╰═══════════════════════╯" + "\n" + "\n");
 
+    }
+
+    public static void darMatch() {
+        System.out.println("ℙ\uD835\uDD52\uD835\uDD63\uD835\uDD52\uD835\uDD53\uD835\uDD56\uD835\uDD5F\uD835\uDD64❕" +
+                " \uD835\uDD3B\uD835\uDD56\uD835\uDD66 \uD835\uDD44\uD835\uDD52\uD835\uDD65\uD835\uDD54\uD835\uDD59❕ " +
+                "\uD835\uDD38\uD835\uDD5A \uD835\uDD56\uD835\uDD64\uD835\uDD65\uD835\uDD52 " +
+                "\uD835\uDD60 \uD835\uDD52\uD835\uDD5E\uD835\uDD60\uD835\uDD63 " +
+                "\uD835\uDD55\uD835\uDD52 \uD835\uDD64\uD835\uDD66\uD835\uDD52 \uD835\uDD67\uD835\uDD5A\uD835\uDD55\uD835\uDD52❕");
+
+    }
 }
